@@ -5,6 +5,8 @@ import React from 'react'
 import type { ClockProps, ClockState } from './types'
 
 export default class Clock extends React.Component<ClockProps, ClockState> {
+  timerID: number | undefined
+
   constructor(props: ClockProps) {
     super(props)
     this.state = {

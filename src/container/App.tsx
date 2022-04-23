@@ -4,6 +4,11 @@ import Clock2 from '../components/clock'
 import BoilingVerdict from '../components/boilingVerdict'
 import './App.css'
 
+const instance = new Clock({
+  title: '1st Clock',
+})
+console.log(instance)
+
 export default function App() {
   const [count, setCount] = useState(0)
   const [celsius, setCelsius] = useState(0)
