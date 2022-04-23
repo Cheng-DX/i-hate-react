@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Clock from '../components/clock/Clock'
+import Clock2 from '../components/clock'
 import BoilingVerdict from '../components/boilingVerdict'
 import './App.css'
 
@@ -15,6 +16,7 @@ export default function App() {
       <Clock title='Hi' />
       <input value={celsius} onChange={({ target: { value } }) => setCelsius(Number(value))} />
       <BoilingVerdict celsius={celsius} />
+      <Clock2 title='clock2' />
     </div>
   )
 }

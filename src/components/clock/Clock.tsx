@@ -1,12 +1,8 @@
-import React from "react";
-
-interface ClockProps {
-  title: string
-}
-interface ClockState {
-  date: Date
-  name: string
-}
+/**
+ * Component in Class
+ */
+import React from 'react'
+import type { ClockProps, ClockState } from './types'
 
 export default class Clock extends React.Component<ClockProps, ClockState> {
   constructor(props: ClockProps) {
@@ -43,7 +39,9 @@ export default class Clock extends React.Component<ClockProps, ClockState> {
         <h2>It is {date.toLocaleTimeString()} </h2>
         <h3>{name}</h3>
         <ul>
-          {nums.map(num => <li key={num}>{num}</li>)}
+          {nums.map(num => (
+            <li key={num}>{num}</li>
+          ))}
         </ul>
       </div>
     )
