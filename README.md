@@ -1,7 +1,7 @@
 <br>
 
 <p align="center">
-<img src="/hate.png" />
+<img style="width: 100px" src="public/hate.png" />
 </p>
 
 <h1 align="center">I Hate React</h1>
