@@ -6,7 +6,7 @@
 
 <h1 align="center">I Hate React</h1>
 
-<p align="center">But I must learn it now 😿</p>
+<p align="center">But I must to learn it now 😿</p>
 
 <br>
 
