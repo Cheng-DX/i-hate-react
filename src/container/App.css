@@ -1,3 +1,22 @@
-.App {
-  text-align: center;
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.app-header{
+  height: 50px;
+  border-bottom: 1px solid #ccc;
+}
+.app-main{
+  height: calc(100vh - 50px);
+}
+.router-link-button{
+  height: 30px;
+  width: 100px;
+  margin: 10px;
+  background-color: rgb(50, 125, 34);
+  color: #fff;
+  font-size: 17px;
+  border: 1px solid #333;
+  border-radius: 5px;
 }

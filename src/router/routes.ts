@@ -1,20 +1,29 @@
 import type { Route } from './types'
-import Clock1 from '../components/clock/Clock'
-import Clock2 from '../components/clock'
+
+import Home from '~/pages/home/Home'
+import User from '~/pages/user/User'
+import NoMatch from '~/components/noMatch'
 
 export const routes: Route[] = [
   {
-    path: '/clock1',
-    component: Clock1,
+    path: '/home',
+    component: Home,
     meta: {
-      title: 'Clock1'
+      title: '🏠 HOME'
     }
   },
   {
-    path: '/clock2',
-    component: Clock2,
+    path: '/user',
+    component: User,
     meta: {
-      title: 'Clock2'
+      title: '🐼 USER'
+    }
+  },
+  {
+    path: '*',
+    component: NoMatch,
+    meta: {
+      title: 'NoMatch'
     }
   }
 ]

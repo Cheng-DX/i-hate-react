@@ -1,0 +1,25 @@
+.btn {
+  height: 2rem;
+  margin: calc(1rem / 5);
+  background-color: #327d22;
+  color: #fff;
+  font-size: 1rem;
+  border: 1px solid #333;
+  border-radius: calc(1rem / 2);
+}
+.btn:hover {
+  background-color: #29651a;
+}
+
+.btn-red {
+  height: 2rem;
+  margin: calc(1rem / 5);
+  background-color: #d1352d;
+  color: #fff;
+  font-size: 1rem;
+  border: 1px solid #333;
+  border-radius: calc(1rem / 2);
+}
+.btn-red:hover {
+  background-color: #b02018;
+}

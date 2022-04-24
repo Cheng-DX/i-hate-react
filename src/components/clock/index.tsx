@@ -19,7 +19,6 @@ export default function Clock(props: ClockProps) {
 
   return (
     <div>
-      <h1>{props.title}</h1>
       <h2>It is {date.toLocaleTimeString()} </h2>
       <h3>{name}</h3>
     </div>
