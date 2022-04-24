@@ -1,27 +1,22 @@
 import { useState } from 'react'
-import Clock from '../components/clock/Clock'
-import Clock2 from '../components/clock'
-import BoilingVerdict from '../components/boilingVerdict'
 import './App.css'
 
-const instance = new Clock({
-  title: '1st Clock',
-})
-console.log(instance)
+import TheRouter from '../router'
+import { Link } from 'react-router-dom'
 
 export default function App() {
-  const [count, setCount] = useState(0)
-  const [celsius, setCelsius] = useState(0)
+  const [path, setPath] = useState('/clock1')
+
+  function switchPath() {
+    setPath(path === '/clock1' ? '/clock2' : '/clock1')
+  }
 
   return (
     <div className="App">
-      <button type="button" onClick={() => setCount(count => count + 1)}>
-        count is: {count}
-      </button>
-      <Clock title='Hi' />
-      <input value={celsius} onChange={({ target: { value } }) => setCelsius(Number(value))} />
-      <BoilingVerdict celsius={celsius} />
-      <Clock2 title='clock2' />
+      <Link to={path} >
+        <button onClick={switchPath}>Switch</button>
+      </Link>
+      <TheRouter />
     </div>
   )
 }
