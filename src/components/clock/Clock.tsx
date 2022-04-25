@@ -11,7 +11,7 @@ export default class Clock extends React.Component<ClockProps, ClockState> {
     super(props)
     this.state = {
       date: new Date(),
-      name: 'clock'
+      name: 'clock',
     }
   }
 
@@ -25,12 +25,11 @@ export default class Clock extends React.Component<ClockProps, ClockState> {
 
   tick() {
     this.setState({
-      date: new Date()
+      date: new Date(),
     })
   }
 
   render() {
-    const { title } = this.props
     const { date, name } = this.state
 
     const nums = [1, 2, 3, 4, 5]

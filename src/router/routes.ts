@@ -9,21 +9,21 @@ export const routes: Route[] = [
     path: '/home',
     component: Home,
     meta: {
-      title: '🏠 HOME'
-    }
+      title: '🏠 HOME',
+    },
   },
   {
     path: '/user',
     component: User,
     meta: {
-      title: '🐼 USER'
-    }
+      title: '🐼 USER',
+    },
   },
   {
     path: '*',
     component: NoMatch,
     meta: {
-      title: 'NoMatch'
-    }
-  }
+      title: 'NoMatch',
+    },
+  },
 ]

@@ -1,10 +1,9 @@
 /**
  * Component in function
  */
-import { useState, useEffect } from 'react'
-import type { ClockProps } from './types'
+import { useEffect, useState } from 'react'
 
-export default function Clock(props: ClockProps) {
+export default function Clock() {
   const [date, setDate] = useState(new Date())
   const [name] = useState('clock')
 

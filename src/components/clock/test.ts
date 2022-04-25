@@ -1,3 +1,3 @@
 export class Test {
-  test: string = 'test'
+  test = 'test'
 }

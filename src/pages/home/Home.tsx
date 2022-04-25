@@ -2,8 +2,8 @@ import { useState } from 'react'
 import './Home.css'
 
 interface Todo {
-  id: number,
-  title: string,
+  id: number
+  title: string
   completed: boolean
 }
 
@@ -16,10 +16,9 @@ export default function Home() {
   const [newTodo, setNewTodo] = useState('')
 
   function switchTodoState(id: number) {
-    setTodos(todos.map(todo => {
-      if (todo.id === id) {
+    setTodos(todos.map((todo) => {
+      if (todo.id === id)
         todo.completed = !todo.completed
-      }
       return todo
     }))
   }
@@ -27,8 +26,9 @@ export default function Home() {
     if (newTodo.length > 0) {
       setTodos([...todos, { id: todos.length + 1, title: newTodo, completed: false }])
       setNewTodo('')
-    } else {
-      alert('Please enter a todo')
+    }
+    else {
+      console.error('Please enter a todo')
     }
   }
   return (
@@ -36,7 +36,7 @@ export default function Home() {
       <div className="todo-list">
         {todos.map(todo => (
           <div className="todo-item" key={todo.id}>
-            <span className={'todo-title' + (todo.completed ? ' is-completed' : '')} >
+            <span className={`todo-title${todo.completed ? ' is-completed' : ''}`} >
               {(todo.completed ? '✅' : '❎') + todo.title}
             </span>
             <button
@@ -47,14 +47,14 @@ export default function Home() {
           </div>
         ))}
       </div>
-      <div className='add-todo'>
+      <div className="add-todo">
         <input
           value={newTodo}
-          className='add-input'
+          className="add-input"
           onChange={e => setNewTodo(e.target.value)}
         />
         <button
-          className='btn'
+          className="btn"
           style={{ width: '120px', marginRight: '20px' }}
           onClick={addTodo}
         >Add Todo</button>
