@@ -1,14 +1,14 @@
 import { useState } from 'react'
-import './Home.css'
+import './Todo.css'
 
-interface Todo {
+interface TodoItem {
   id: number
   title: string
   completed: boolean
 }
 
-export default function Home() {
-  const initTodos: Todo[] = [
+export default function Todo() {
+  const initTodos: TodoItem[] = [
     { id: 1, title: 'Todo 1', completed: false },
     { id: 2, title: 'Todo 2', completed: false },
   ]
@@ -16,7 +16,7 @@ export default function Home() {
   const [newTodo, setNewTodo] = useState('')
 
   function switchTodoState(id: number) {
-    setTodos(todos.map((todo) => {
+    setTodos(todos.map(todo => {
       if (todo.id === id)
         todo.completed = !todo.completed
       return todo
@@ -32,11 +32,11 @@ export default function Home() {
     }
   }
   return (
-    <div className="home-root">
+    <div className="todo-root">
       <div className="todo-list">
         {todos.map(todo => (
           <div className="todo-item" key={todo.id}>
-            <span className={`todo-title${todo.completed ? ' is-completed' : ''}`} >
+            <span className={`todo-title ${todo.completed ? 'is-completed' : ''}`} >
               {(todo.completed ? '✅' : '❎') + todo.title}
             </span>
             <button

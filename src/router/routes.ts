@@ -1,15 +1,15 @@
 import type { Route } from './types'
 
-import Home from '~/pages/home/Home'
+import Todo from '~/pages/todo'
 import User from '~/pages/user/User'
 import NoMatch from '~/components/noMatch'
 
 export const routes: Route[] = [
   {
-    path: '/home',
-    component: Home,
+    path: '/todo',
+    component: Todo,
     meta: {
-      title: '🏠 HOME',
+      title: '✅ Todo',
     },
   },
   {
